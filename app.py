@@ -128,7 +128,7 @@ if uploaded_file:
             
             # Create a placeholder for the image
             img_placeholder = st.empty()
-            img_placeholder.image(preview_img, use_container_width=True)
+            img_placeholder.image(preview_img, width=None)
             
             # Get the dimensions of the displayed image container
             # This is a workaround since Streamlit doesn't provide exact dimensions
@@ -163,10 +163,10 @@ if uploaded_file:
     col1, col2 = st.columns(2)
     with col1:
         st.subheader("Original Image")
-        st.image(image, use_container_width=True)
+        st.image(image, width=None)
     with col2:
         st.subheader(f"With {effect_option} Effect")
-        st.image(output, use_container_width=True)
+        st.image(output, width=None)
         
     # Add download button for the processed image
     # Create a unique filename based on effect and timestamp
@@ -306,7 +306,7 @@ if uploaded_file:
                     saved_img = cv2.cvtColor(saved_img, cv2.COLOR_BGR2RGB)
                     # Display the image in a new section
                     st.subheader("Saved Comparison Image")
-                    st.image(saved_img, use_container_width=True)
+                    st.image(saved_img, width=None)
                 else:
                     st.error("Image file not found.")
         
@@ -344,7 +344,7 @@ else:
     for i, img_path in enumerate(sample_images):
         try:
             with cols[i % 3]:
-                st.image(img_path, use_container_width=True, caption=f"Sample {i+1}")
+                st.image(img_path, width=None, caption=f"Sample {i+1}")
         except:
             pass
     

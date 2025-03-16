@@ -32,7 +32,7 @@ env/
 .env/
 
 # Streamlit
-.streamlit/
+# .streamlit/
 
 # IDE specific files
 .idea/
