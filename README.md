@@ -27,21 +27,119 @@ A powerful image editing application that allows you to apply professional light
 
 ## 🚀 Installation
 
+### Automatic Setup (Recommended)
+
+#### Windows Users
 1. Clone this repository:
    ```
    git clone https://github.com/Samarth375-hub/OpenCV_project.git
    cd OpenCV_project
    ```
 
-2. Install the required packages:
+2. Run the setup script:
+   ```
+   setup.bat
+   ```
+
+3. Start the application:
+   ```
+   start_app.bat
+   ```
+
+#### macOS/Linux Users
+1. Clone this repository:
+   ```
+   git clone https://github.com/Samarth375-hub/OpenCV_project.git
+   cd OpenCV_project
+   ```
+
+2. Run the setup script:
+   ```
+   bash setup.sh
+   ```
+
+3. Start the application:
+   ```
+   bash start_app.sh
+   ```
+
+### Manual Setup
+
+1. Clone this repository:
+   ```
+   git clone https://github.com/Samarth375-hub/OpenCV_project.git
+   cd OpenCV_project
+   ```
+
+2. Create and activate a virtual environment (recommended):
+   ```
+   # Windows
+   python -m venv lighting_effects_env
+   lighting_effects_env\Scripts\activate
+
+   # macOS/Linux
+   python -m venv lighting_effects_env
+   source lighting_effects_env/bin/activate
+   ```
+
+3. Install the required packages:
    ```
    pip install -r requirements.txt
    ```
 
-3. Run the application:
+4. Create a Streamlit configuration file (optional but recommended):
+   ```
+   # Create the .streamlit directory if it doesn't exist
+   mkdir -p .streamlit
+
+   # Create the config.toml file with the following content
+   echo "[server]
+   headless = false
+   port = 8502
+   enableCORS = false
+   enableXsrfProtection = false
+   address = \"localhost\"
+
+   [browser]
+   serverAddress = \"localhost\"
+   serverPort = 8502" > .streamlit/config.toml
+   ```
+
+5. Run the application:
    ```
    streamlit run app.py
    ```
+
+6. Access the application in your browser:
+   ```
+   http://localhost:8502
+   ```
+
+## 🔧 Troubleshooting
+
+### Port Already in Use
+If you see an error message saying "Port 8501 is already in use", you can:
+- Use a different port by modifying the `.streamlit/config.toml` file
+- Kill the existing Streamlit process:
+  ```
+  # Windows
+  taskkill /f /im python.exe
+  
+  # macOS/Linux
+  pkill -f streamlit
+  ```
+
+### Streamlit Version Compatibility
+This application is compatible with Streamlit version 1.32.0. If you encounter any issues with different versions:
+- Check your Streamlit version: `pip show streamlit`
+- Update to the recommended version: `pip install streamlit==1.32.0`
+
+### Image Display Issues
+If images are not displaying correctly, ensure you're using the correct parameter for your Streamlit version:
+- For newer versions of Streamlit: `use_container_width=True`
+- For older versions of Streamlit: `width=None`
+
+The current code uses `width=None` which is compatible with most Streamlit versions.
 
 ## 📖 Usage
 
