@@ -45,6 +45,9 @@ env/
 # results/  # Commented out to include the results directory
 *.log
 
+# Personal documentation (not for GitHub)
+project_challenges.md
+
 # Large media files
 *.mp4
 *.tiff
