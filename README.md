@@ -2,8 +2,6 @@
 
 A powerful image editing application that allows you to apply professional lighting effects to your photos using OpenCV and Streamlit.
 
-![Lighting Effects Editor](https://github.com/yourusername/lighting-effects-editor/raw/main/screenshot.png)
-
 ## ✨ Features
 
 - **Multiple Lighting Effects**:
@@ -31,8 +29,8 @@ A powerful image editing application that allows you to apply professional light
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/lighting-effects-editor.git
-   cd lighting-effects-editor
+   git clone https://github.com/Samarth375-hub/OpenCV_project.git
+   cd OpenCV_project
    ```
 
 2. Install the required packages:
@@ -89,4 +87,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - OpenCV for image processing capabilities
 - Streamlit for the interactive web interface
-- All the photographers who provided sample images 
+- All the photographers who provided sample images
